@@ -1,8 +1,14 @@
 package ingredient;
 
 import recipe.Method;
-
+import lombok.*;
 import java.io.Serializable;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@ToString
+@EqualsAndHashCode
 
 public class Ingredient implements Serializable   {
 
@@ -12,12 +18,12 @@ public class Ingredient implements Serializable   {
     public int reserve; //запас продукта
     public int recipeQuantity; //количесвто шт/доз ингридиента в рецепте
 
-    public Ingredient(String name, int recipeQuantity, double costPrice, double retailPrice, int quantity) {
+    public Ingredient(String name, int recipeQuantity, double costPrice, double retailPrice, int reserve) {
         this.name = name;
         this.recipeQuantity = recipeQuantity;
         this.costPrice = costPrice;
         this.retailPrice = retailPrice;
-        this.reserve = quantity;
+        this.reserve = reserve;
     }
 
     public Ingredient(String name){
@@ -32,45 +38,45 @@ public class Ingredient implements Serializable   {
         return (name + " " + recipeQuantity + " " + costPrice + " " + retailPrice + " " + reserve + "\n");
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getCostPrice() {
-        return costPrice;
-    }
-
-    public void setCostPrice(double costPrice) {
-        this.costPrice = costPrice;
-    }
-
-    public double getRetailPrice() {
-        return retailPrice;
-    }
-
-    public void setRetailPrice(double retailPrice) {
-        this.retailPrice = retailPrice;
-    }
-
-    public int getReserve() {
-        return reserve;
-    }
-
-    public void setReserve(int reserve) {
-        this.reserve = reserve;
-    }
-
-    public int getRecipeQuantity() {
-        return recipeQuantity;
-    }
-
-    public void setRecipeQuantity(int recipeQuantity){
-        this.recipeQuantity = recipeQuantity;
-    }
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public double getCostPrice() {
+//        return costPrice;
+//    }
+//
+//    public void setCostPrice(double costPrice) {
+//        this.costPrice = costPrice;
+//    }
+//
+//    public double getRetailPrice() {
+//        return retailPrice;
+//    }
+//
+//    public void setRetailPrice(double retailPrice) {
+//        this.retailPrice = retailPrice;
+//    }
+//
+//    public int getReserve() {
+//        return reserve;
+//    }
+//
+//    public void setReserve(int reserve) {
+//        this.reserve = reserve;
+//    }
+//
+//    public int getRecipeQuantity() {
+//        return recipeQuantity;
+//    }
+//
+//    public void setRecipeQuantity(int recipeQuantity){
+//        this.recipeQuantity = recipeQuantity;
+//    }
 
     public static Ingredient createIngredient(){
         Ingredient i = new Ingredient();

@@ -27,14 +27,14 @@ public class Method {
         try {
             i = scanner.nextInt();
         } catch (InputMismatchException e) {
-            System.out.println(UiMessage.NOT_INTEGER);
+            System.out.println(UiMessage.NOT_INTEGER.getMessage());
             while (true) {
                 scanner.next();
                 if (scanner.hasNextInt()) {
                     i = scanner.nextInt();
                     break;
                 }
-                System.out.println(UiMessage.NOT_INTEGER);
+                System.out.println(UiMessage.NOT_INTEGER.getMessage());
             }
         }
         return i;
@@ -45,14 +45,14 @@ public class Method {
         try {
             d = scanner.nextDouble();
         } catch (InputMismatchException e) {
-            System.out.println(UiMessage.NOT_DOUBLE);
+            System.out.println(UiMessage.NOT_DOUBLE.getMessage());
             while (true) {
                 scanner.next();
                 if (scanner.hasNextDouble()) {
                     d = scanner.nextDouble();
                     break;
                 }
-                System.out.println(UiMessage.NOT_DOUBLE);
+                System.out.println(UiMessage.NOT_DOUBLE.getMessage());
             }
         }
         return d;
