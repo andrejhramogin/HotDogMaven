@@ -62,6 +62,7 @@ public class Method {
         PrintList.printIngredientList(ingrList);
         List<Ingredient> recipe = new ArrayList<>();
         List<Recipe> recipeBase = FileRead.readRecipeList();
+//        List<Recipe> recipeBase = new ArrayList<>();
         int ingrChoice;
         System.out.println(UiMessage.INGREDIENT_CHOICE.getMessage());
 
@@ -77,7 +78,8 @@ public class Method {
             recipe.add(ingrList.get(ingrChoice - 1));
         }
         PrintList.printRecipeIngrList(recipe);
-        int number = recipeBase.get(recipeBase.size()-1).getSequenceNumber() + 1;
+        int number = recipeBase.get(recipeBase.size() - 1).getSequenceNumber() + 1;
+//        int number = 1;
         recipeBase.add(new Recipe(number, recipe, 0));
         FileWrite.writeRecipeListToFile(recipeBase);
     }

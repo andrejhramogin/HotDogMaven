@@ -15,7 +15,8 @@ public class OrderMethod {
     public static void createOrder(List<Recipe>list){
         PrintList.printRecipeList(list);
         List<Order> orderList = FileRead.readOrderList();
-        List<Recipe> recipeList = new ArrayList<>();
+//        List<Order>orderList = new ArrayList<>();
+         List<Recipe> recipeList = new ArrayList<>();
         int sequenceNumber;
 
         if(orderList.isEmpty()){
