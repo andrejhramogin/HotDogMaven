@@ -38,46 +38,6 @@ public class Ingredient implements Serializable   {
         return (name + " " + recipeQuantity + " " + costPrice + " " + retailPrice + " " + reserve + "\n");
     }
 
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public double getCostPrice() {
-//        return costPrice;
-//    }
-//
-//    public void setCostPrice(double costPrice) {
-//        this.costPrice = costPrice;
-//    }
-//
-//    public double getRetailPrice() {
-//        return retailPrice;
-//    }
-//
-//    public void setRetailPrice(double retailPrice) {
-//        this.retailPrice = retailPrice;
-//    }
-//
-//    public int getReserve() {
-//        return reserve;
-//    }
-//
-//    public void setReserve(int reserve) {
-//        this.reserve = reserve;
-//    }
-//
-//    public int getRecipeQuantity() {
-//        return recipeQuantity;
-//    }
-//
-//    public void setRecipeQuantity(int recipeQuantity){
-//        this.recipeQuantity = recipeQuantity;
-//    }
-
     public static Ingredient createIngredient(){
         Ingredient i = new Ingredient();
         System.out.println("Enter the name of ingredient:");

@@ -3,6 +3,7 @@ package org.example;
 import order.Order;
 import order.OrderMethod;
 import recipe.Method;
+import ui.UiManage;
 import write_read_print.FileRead;
 import write_read_print.PrintList;
 
@@ -11,13 +12,14 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+        UiManage.manage();
 
         //Создание нового заказа
         //Запись заказа в файл
         //Вывод списка заказов на консоль
-        OrderMethod.createOrder(FileRead.readRecipeList());
-        List<Order> orderList = FileRead.readOrderList();
-        PrintList.printOrderList(orderList);
+//        OrderMethod.createOrder(FileRead.readRecipeList());
+//        List<Order> orderList = FileRead.readOrderList();
+//        PrintList.printOrderList(orderList);
 
 
 

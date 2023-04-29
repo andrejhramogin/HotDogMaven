@@ -97,7 +97,7 @@ public class Method {
 
     public static void addIngrToIngredientlist() {
         List<Ingredient> list = FileRead.readIngredientList(UiMessage.INGREDIENT_LIST.getMessage());
-        System.out.println(UiMessage.ADD_NEW_INGREDIENT);
+        System.out.println(UiMessage.ADD_NEW_INGREDIENT.getMessage());
         list.add(Ingredient.createIngredient());
         list = list.stream()
                 .sorted(new ComparatorNameIngr())
@@ -106,8 +106,8 @@ public class Method {
         FileWrite.writeIngrListToFile(list, UiMessage.INGREDIENT_LIST.getMessage());
     }
 
-    public void deleteIngrFromIngredientlist(List<Ingredient> list, int i) {
-        list.remove(i);
+    public static void deleteIngrFromIngredientlist(List<Ingredient> list, int i) {
+        list.remove(i-1);
         FileWrite.writeIngrListToFile(list, UiMessage.INGREDIENT_LIST.getMessage());
     }
 }
