@@ -1,7 +1,6 @@
 package recipe;
 
 import ingredient.Ingredient;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +9,6 @@ import java.util.List;
 
 @Getter
 @Setter
-
 public class Recipe implements Serializable  {
 
     private static final long serialVersionUID = 1L;

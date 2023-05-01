@@ -16,7 +16,7 @@ public class OrderMethod {
         PrintList.printRecipeList(list);
         List<Order> orderList = FileRead.readOrderList();
 //        List<Order>orderList = new ArrayList<>();
-         List<Recipe> recipeList = new ArrayList<>();
+         List<Recipe> order = new ArrayList<>();
         int sequenceNumber;
 
         if(orderList.isEmpty()){
@@ -32,9 +32,9 @@ public class OrderMethod {
             System.out.println(UiMessage.QUANTITY.getMessage());
             int quantity = Method.getInteger();
             list.get(choice-1).setQuantityHotDog(quantity);
-            recipeList.add(list.get(choice-1));
+            order.add(list.get(choice-1));
         }
-        orderList.add(new Order(sequenceNumber, recipeList));
+        orderList.add(new Order(sequenceNumber, order));
         FileWrite.writeOrderList(orderList);
     }
 }

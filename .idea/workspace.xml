@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1319f48f-aaa5-4c44-8c08-0905fe08655c" name="Changes" comment=" 26/04/23 - 2&#10; перезаписаны все файлы (ингредиенты, рецепты, заказы)">
+    <list default="true" id="1319f48f-aaa5-4c44-8c08-0905fe08655c" name="Changes" comment=" 29/04/23&#10; Удалены геттеры/сеттеры. Это передано Maven.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/order/OrderMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/order/OrderMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/recipe/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe/Method.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/recipe/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe/Recipe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/UiManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/UiManage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/write_read_print/PrintList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/write_read_print/PrintList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682537329235</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=" 29/04/23&#10; Удалены геттеры/сеттеры. Это передано Maven.">
+      <created>1682792781990</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682792781990</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +127,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="26/04/23" />
     <MESSAGE value=" 26/04/23 - 2&#10; перезаписаны все файлы (ингредиенты, рецепты, заказы)" />
-    <option name="LAST_COMMIT_MESSAGE" value=" 26/04/23 - 2&#10; перезаписаны все файлы (ингредиенты, рецепты, заказы)" />
+    <MESSAGE value=" 29/04/23&#10; Удалены геттеры/сеттеры. Это передано Maven." />
+    <option name="LAST_COMMIT_MESSAGE" value=" 29/04/23&#10; Удалены геттеры/сеттеры. Это передано Maven." />
   </component>
 </project>

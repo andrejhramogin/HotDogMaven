@@ -11,17 +11,22 @@ import java.util.List;
 public class UiManage {
 
 
-    public static int getChoice(){
+    public static int getChoice() {
         System.out.println("Выберите действие: \n1 - Просмотреть список ингридиентов." +
                 "\n2 - Добавить ингридиент." +
-                "\n3 -  Удалить ингридиент из списка");
+                "\n3 - Удалить ингридиент из списка." +
+                "\n4 - Просмотреть список рецептов." +
+                "\n5 - Создать новый рецепт." +
+                "\nДля выхода нажмите любую букву.");
         return Method.getInteger();
     }
 
-    public static void manage(){
+    public static void manage() {
         List<Ingredient> list = FileRead.readIngredientList(UiMessage.INGREDIENT_LIST.getMessage());
         int choice = getChoice();
-        switch (choice){
+        switch (choice) {
+            case 0:
+                return;
             case 1:
                 PrintList.printIngredientListFromFile();
                 break;
@@ -33,6 +38,13 @@ public class UiManage {
                 System.out.println("Выберите номер удаляемого ингридиента");
                 int ingrChoice = Method.getInteger();
                 Method.deleteIngrFromIngredientlist(list, ingrChoice);
+            case 4:
+                PrintList.printRecipeList(FileRead.readRecipeList());
+                break;
+            case 5:
+                Method.createRecipe(FileRead.readIngredientList("ingredientlist.bin"));
+            default:
+                System.out.println("Неверный выбор.");
         }
     }
 }
