@@ -63,6 +63,7 @@ public class Method {
         List<Ingredient> recipe = new ArrayList<>();
         List<Recipe> recipeBase = FileRead.readRecipeList();
 //        List<Recipe> recipeBase = new ArrayList<>();
+
         int ingrChoice;
         System.out.println(UiMessage.INGREDIENT_CHOICE.getMessage());
 
@@ -77,6 +78,7 @@ public class Method {
             PrintList.printRecipeIngredient(ingrList.get(ingrChoice - 1));
             recipe.add(ingrList.get(ingrChoice - 1));
         }
+
         PrintList.printRecipeIngrList(recipe);
         int number = recipeBase.get(recipeBase.size() - 1).getSequenceNumber() + 1;
 //        int number = 1;
@@ -97,7 +99,7 @@ public class Method {
 
     public static void addIngrToIngredientlist() {
         List<Ingredient> list = FileRead.readIngredientList(UiMessage.INGREDIENT_LIST.getMessage());
-        System.out.println(UiMessage.ADD_NEW_INGREDIENT);
+        System.out.println(UiMessage.ADD_NEW_INGREDIENT.getMessage());
         list.add(Ingredient.createIngredient());
         list = list.stream()
                 .sorted(new ComparatorNameIngr())
@@ -106,8 +108,8 @@ public class Method {
         FileWrite.writeIngrListToFile(list, UiMessage.INGREDIENT_LIST.getMessage());
     }
 
-    public void deleteIngrFromIngredientlist(List<Ingredient> list, int i) {
-        list.remove(i);
+    public static void deleteIngrFromIngredientlist(List<Ingredient> list, int i) {
+        list.remove(i-1);
         FileWrite.writeIngrListToFile(list, UiMessage.INGREDIENT_LIST.getMessage());
     }
 }

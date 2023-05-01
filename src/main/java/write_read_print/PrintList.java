@@ -71,12 +71,15 @@ public class PrintList {
         if (list.isEmpty()) {
             System.out.println(UiMessage.EMPTY_LIST.getMessage());
         } else {
-            list.forEach(PrintList::printIngredient);
+            for(int i = 0; i<list.size(); i++){
+                System.out.print(i+1+ ". ");
+                printIngredient(list.get(i));
+            }
         }
     }
 
     //выводит список всех ингридиентов из файла ingredientlist.bin (все доступные ингридиенты)
-    public static void printFileIngredientlist() {
+    public static void printIngredientListFromFile() {
         PrintList.printIngredientList(FileRead.readIngredientList(UiMessage.INGREDIENT_LIST.getMessage()));
     }
 }
